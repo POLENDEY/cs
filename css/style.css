@@ -1,0 +1,287 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.body {
+  background-color: rgb(221,221,221);
+  min-width: 100%;
+  min-height: 100vh;
+}
+
+a,button{
+    cursor: pointer;
+}
+
+li a {
+    text-decoration: none;
+    color: #000;
+}
+
+nav {
+    position: absolute;
+    top: 100px;
+    right: 50px;
+    width: 250px;
+}
+
+.navigation {
+    position: fixed;
+    right: -500px;
+    width: 350px;
+    height: 100%;
+    background-color: #fff;
+    transition: .5s;
+}
+
+.navigation ul li{
+    color: #000;
+    text-align: center;
+    text-transform: uppercase;
+    list-style-type: none;
+    font-size: 1.5em;
+    padding: 20px 30px;
+    border-bottom: 1pt solid #252525;
+}
+
+.hamburger, .bar{
+    position: fixed;
+}
+
+.hamburger{
+    display: block;
+    top: 4%;
+    left: 90%;
+    width: 30px;
+    height: 30px;
+    transform: translateY(-50%);
+    border: 0;
+    background: 0 0;
+}
+
+.bar{
+    top: 3px;
+    background: #fff;
+    width: 100%;
+    height: 4px;
+    transition: all .3s ease-in;
+}
+
+#bar2{
+    top: 11px;
+}
+
+#bar3{
+    top: 19px;
+}
+
+.navigation.active{
+    right: 0;
+}
+
+.hamburger.open #bar1{
+    background-color: #000;
+    transform: rotate(45deg) translate(6px, 5px);
+}
+
+.hamburger.open #bar2{
+    background-color: transparent;
+}
+
+.hamburger.open #bar3{
+    background-color: #000;
+    transform: rotate(-45deg) translate(6px, -5px);
+}
+
+      .dark {
+        background: 0;
+        min-height: 100%;
+        min-width: 100%;
+        position: fixed;
+        top: 0;
+        right: 0px;
+        //opacity: 40%;
+        transition: 0.5s;
+        pointer-events: none;
+      }
+      
+      .dark.open {
+        background-color: #0f111d;
+        //opacity: 40%;
+        //right: 0;
+        pointer-events: auto;
+      }
+
+.scroll-to-hide {
+        position: fixed;
+        top: 0;
+        opacity: 1;
+        transition: opacity 0.3s ease-in-out;
+      }
+
+      .hide {
+        opacity: 0;
+        pointer-events: none;
+        /* setting pointer-events to none ensures that the element does not capture any mouse clicks or hover events when it is hidden */
+      }
+
+.header {
+  color: #fff;
+  font-weight: 300;
+  font-size: 10px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  background-color: #0f111d;
+  padding: 5%;
+  transition: 1s;
+}
+
+.footer {
+  color: #fff;
+  font-weight: 200;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  background-color: #0f111d;
+  padding: 10%;
+  margin-bottom: 0;
+  transition: 1s;
+}
+
+.header h1 {
+  text-transform: uppercase;
+}
+
+.content {
+  background-color: #fff;
+  text-align: center;
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 2%;
+  padding: 5%;
+  border-radius: 25px;
+}
+
+.content a {
+    color: #000;
+}
+
+.content h1, .content p {
+    color: #0f111d;
+}
+
+#vid {
+    margin-top: 25%;
+}
+
+.content p {
+  margin: 5%;
+}
+
+.content img {
+    width: 100px;
+}
+
+#vid1 {
+    width: 300px;
+}
+
+nav img {
+    width: 50px;
+    margin-top: 100%;
+}
+
+.submit {
+   padding: 1%;
+   width: 20%;
+   border: none;
+   background-color: #7b48fe;
+   color: #fff;
+   font-size: 20px;
+   border-radius: 20px;
+   outline: none;
+   transition: .3s;
+}
+
+.submit:hover {
+	background-color: #50fe48;
+	color: #000;
+}
+
+input {
+	border-radius: 0px 15px 0px 15px;
+	outline: none;
+	transition: 1s;
+	padding: 5px;
+}
+
+textarea {
+	   width: 20%;
+	   height: 70px;
+	   border-radius: 0px 15px 0px 15px;
+	   outline: none;
+	   padding: 7px;
+	   transition: 1s;
+}
+
+@media only screen and (min-width: 600px) {
+    .header {
+        padding: 1%;
+        font-size: 15px;
+    }
+	
+	.footer {
+		padding: 1%; 
+	}
+	
+	.hamburger{
+    display: block;
+    top: 4%;
+    left: 90%;
+    width: 30px;
+    height: 30px;
+    transform: translateY(-50%);
+    border: 0;
+    background: 0 0;
+   }
+   
+   .content p {
+	   font-size: 20px;
+   }
+   
+   input {
+	   width: 20%;
+	   height: 30px;
+	   border-radius: 15px 0px 15px 0px;
+	   outline: none;
+	   padding: 5px;
+   }
+   
+   textarea {
+	   width: 20%;
+	   height: 70px;
+	   border-radius: 15px 0px 15px 0px;
+	   outline: none;
+	   padding: 7px;
+   }
+   
+   form p {
+	   font-size: 25px;
+   }
+   
+   .submit {
+	   width: 10%;
+   }
+}
